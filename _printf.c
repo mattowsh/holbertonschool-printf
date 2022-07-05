@@ -40,19 +40,10 @@ int _printf(const char *format, ...)
 					(data[j].f)(args);
 				j++;
 			}
-			i++;
 		}
 
-		/* case: the most important special characters */
-		if (format[i] == "\\")
-			if (format[i + 1] == "n") /* newline */
-				_putchar('\n');
-			else if (format[i + 1] == "b") /* backspace */
-				_putchar('\b');
-			else if (format[i + 1] == "t")	/* tab */
-				_putchar('\t');
-
 		_putchar(format[i]);
+		i++;
 	}
 
 	va_end(args);
@@ -63,3 +54,4 @@ int _printf(const char *format, ...)
  * las mini funciones
  * checkear la logica de los loops y si funca ok
  * calculo final strlen de la string printeada
+ * alinear: no es necesario hacer ifs para los /n
