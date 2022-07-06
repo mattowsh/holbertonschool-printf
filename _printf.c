@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, j = 0;
+	int i = 0, j = 0, k = 0, l = 0, length = 0;
 
 /* functions to execute according to format[i + 1] */
 	toprint_t data[] = {
@@ -18,11 +18,11 @@ int _printf(const char *format, ...)
 		{"%", print_%},
 		{"d", print_di},
 		{"i", print_di},
-		{"u", print_u},
+		/*{"u", print_u}, -isn't requerided to mandatory tasks-
 		{"o", print_o},
 		{"x", print_xX},
 		{"X", print_xX},
-		{"p", print_p},
+		{"p", print_p},*/
 		{NULL, NULL}
 	};
 
@@ -37,21 +37,30 @@ int _printf(const char *format, ...)
 			while (data[j].letter)
 			{
 				if (data[j].letter[0] == format[i + 1])
-					(data[j].f)(args);
+				{
+					l = 0;
+					length += (data[j].f)(args);
+					l++;
+				}
 				j++;
 			}
 		}
+		else
+		{
+			_putchar(format[i]);
+			length++;
+		}
 
-		_putchar(format[i]);
-		i++;
+		if (l>0) 
+			i += 2;
+		else
+			i++;
 	}
 
 	va_end(args);
-	return (......);
+
+	return (length);
 }
 
 /* QUEDA VER
- * las mini funciones
- * checkear la logica de los loops y si funca ok
  * calculo final strlen de la string printeada
- * alinear: no es necesario hacer ifs para los /n
