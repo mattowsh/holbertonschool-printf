@@ -54,7 +54,7 @@ value = va_arg(args, int)
  return (i);
  }
 /**
- * print_perc - prints perc sign
+ * print_prc - prints perc sign
  * @args : list of args
  * Return : 1
  */
