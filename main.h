@@ -18,7 +18,7 @@ int _printf(const char *format, ...);
 int _putchar(char);
 int print_c(va_list args);
 int print_s(va_list args);
-int print_%(va_list args);
+int print_prc(va_list args);
 int print_di(va_list args);
 
 #endif
