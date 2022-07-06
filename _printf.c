@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, j = 0, k = 0, l = 0, f.length = 0;
+	int i = 0, j = 0, k = 0, l = 0, length = 0;
 
 /* functions to execute according to format[i + 1] */
 	toprint_t data[] = {
@@ -39,16 +39,17 @@ int _printf(const char *format, ...)
 				if (data[j].letter[0] == format[i + 1])
 				{
 					l = 0;
-					(data[j].f)(args);
-					f.length += 
-					k += 2; /*how many times execute a f*/
+					length += (data[j].f)(args);
 					l++;
 				}
 				j++;
 			}
 		}
-
-		_putchar(format[i]);
+		else
+		{
+			_putchar(format[i]);
+			length++;
+		}
 
 		if (l>0) 
 			i += 2;
@@ -57,7 +58,8 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(args);
-	return (i - k + f.length);
+
+	return (length);
 }
 
 /* QUEDA VER
