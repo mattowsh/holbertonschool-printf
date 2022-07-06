@@ -33,3 +33,33 @@ int print_s(va_list args)
 
 	return (i); 
 }
+/**
+ * print_di - prints a number
+ * @args : list of args
+ * Return : length of a number
+ */
+int print_di(va_list args)
+{
+	int i ;
+	int value;
+i = 0;
+value = va_arg(args, int)
+	if (value < 0)
+{ _putchar('-');
+	i = 1;
+}
+	for (i ; value[i]; i++)
+		_putchar(value[i] + '\0')
+		
+ return (i);
+ }
+/**
+ * print_perc - prints perc sign
+ * @args : list of args
+ * Return : 1
+ */
+int print_prc(__attribute__((unused)) va_list args)
+{
+	_putchar('%');
+	return (1);
+}
