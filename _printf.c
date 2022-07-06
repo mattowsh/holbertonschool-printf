@@ -9,13 +9,13 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, j = 0, k = 0, l = 0, length = 0;
+	int i = 0, j = 0, l = 0, length = 0;
 
 /* functions to execute according to format[i + 1] */
 	toprint_t data[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"%", print_%},
+		{"%", print_prc},
 		{"d", print_di},
 		{"i", print_di},
 		/*{"u", print_u}, -isn't requerided to mandatory tasks-
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 /* check format[i + 1] and select the corresponding function */
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == "%")
+		if (format[i] == '%')
 		{
 			j = 0;
 			while (data[j].letter)
@@ -61,6 +61,3 @@ int _printf(const char *format, ...)
 
 	return (length);
 }
-
-/* QUEDA VER
- * calculo final strlen de la string printeada
