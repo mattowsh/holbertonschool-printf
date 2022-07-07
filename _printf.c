@@ -29,16 +29,18 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 /* check format[i + 1] and select the corresponding function */
+	if (format == NULL)
+		return (-1);
+
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
+			l = 0;
 			j = 0;
-			while (data[j].letter)
+			while (data[j].letter && format[i + 1])
 			{
-				l = 0;
-				if (format[i + 1] && 
-				data[j].letter[0] == format[i + 1])
+				if (data[j].letter[0] == format[i + 1])
 				{
 					length += (data[j].f)(args);
 					l++;
