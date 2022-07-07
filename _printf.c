@@ -36,6 +36,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
+
 			l = 0;
 			j = 0;
 			while (data[j].letter && format[i + 1])
@@ -48,7 +51,7 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			
-			if (l == 0 && format[i + 1] == '\0')
+			if (l == 0 && format[i + 1] != '\0')
 				_putchar(format[i]);
 		}
 		else
