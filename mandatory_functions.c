@@ -51,3 +51,18 @@ int print_prc(__attribute__((unused)) va_list args)
 	_putchar('%');
 	return (1); 
 }
+
+/**
+ * print_di - Prints a number
+ * @args : list of arguments
+ *
+ * Return: length of the number
+ */
+
+int print_di(va_list args)
+{
+	int value = va_arg(args, int);
+	int module = value % 10;
+
+/* PENDING */	
+}	

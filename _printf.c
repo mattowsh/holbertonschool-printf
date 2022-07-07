@@ -16,9 +16,9 @@ int _printf(const char *format, ...)
 		{"c", print_c},
 		{"s", print_s},
 		{"%", print_prc},
-		/*{"d", print_di},
+		{"d", print_di},
 		{"i", print_di},
-		{"u", print_u}, -isn't requerided to mandatory tasks-
+		/*{"u", print_u}, -isn't requerided to mandatory tasks-
 		{"o", print_o},
 		{"x", print_xX},
 		{"X", print_xX},
