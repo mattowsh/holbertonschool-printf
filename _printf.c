@@ -45,13 +45,20 @@ int _printf(const char *format, ...)
 				if (data[j].letter[0] == format[i + 1])
 				{
 					length += (data[j].f)(args);
-					i++;
+					l = 1;
 				}
 				j++;
 			}
 			
-			if (l == 0 && format[i + 1] != '\0')
-				length += _putchar(format[i]);
+			if (l)
+			{
+				i++;
+				l = 0;
+			}
+			else
+				length += _putchar('%');
+			/*if (l == 0 && format[i + 1] != '\0')
+				length += _putchar(format[i]);*/
 		}
 		else
 			length += _putchar(format[i]);
