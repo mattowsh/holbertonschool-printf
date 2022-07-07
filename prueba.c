@@ -36,32 +36,6 @@ int print_s(va_list args)
 }
 
 /**
- * print_di - prints a number
- * @args : list of args
- * Return : length of a number
- */
-
-int print_di(va_list args)
-{
-	int i = 0;
-	int value = va_arg(args, int);
-
-	if (value < 0)
-	{ 
-		_putchar('-');
-		i = 1;
-	}
-
-	while (value)
-	{
-		_putchar(value[i] + '\0');
-		i++;
-	}
-		
-	return (i);
- }
-
-/**
  * print_prc - prints perc sign
  * @args : list of args
  * Return : 1
