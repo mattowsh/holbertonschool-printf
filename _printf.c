@@ -42,6 +42,8 @@ int _printf(const char *format, ...)
 					length += (data[j].f)(args);
 					l++;
 				}
+				else
+					_putchar('%');
 				j++;
 			}
 		}
