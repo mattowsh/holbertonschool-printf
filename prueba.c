@@ -26,6 +26,9 @@ int print_s(va_list args)
 	int i = 0;
 	char *str = va_arg(args, char *);
 
+	if (!str)
+		str = "(null)";
+
 	while (str[i])
 	{
 		_putchar(str[i]);
