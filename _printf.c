@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			
-			if (l == 0)
+			if (l == 0 && format[i + 1] == '\0')
 				_putchar(format[i]);
 		}
 		else
