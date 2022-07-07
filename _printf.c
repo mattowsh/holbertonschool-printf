@@ -42,11 +42,12 @@ int _printf(const char *format, ...)
 					length += (data[j].f)(args);
 					l++;
 				}
+				
+				if (data[j].letter[0] != format[i + 1])
+					_putchar(format[i]);
+
 				j++;
 			}
-				
-			if (data[j].letter[0] != format[i + 1])
-				_putchar('%');
 		}
 		else
 		{
