@@ -39,14 +39,13 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 
-			l = 0;
 			j = 0;
 			while (data[j].letter && format[i + 1])
 			{
 				if (data[j].letter[0] == format[i + 1])
 				{
 					length += (data[j].f)(args);
-					l++;
+					i++;
 				}
 				j++;
 			}
@@ -57,10 +56,7 @@ int _printf(const char *format, ...)
 		else
 			length += _putchar(format[i]);
 
-		if (l>0) 
-			i += 2;
-		else
-			i++;
+		i++;
 	}
 
 	va_end(args);
