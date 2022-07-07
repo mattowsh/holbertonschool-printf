@@ -49,7 +49,6 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			
 			if (l)
 			{
 				i++;
@@ -57,8 +56,6 @@ int _printf(const char *format, ...)
 			}
 			else
 				length += _putchar('%');
-			/*if (l == 0 && format[i + 1] != '\0')
-				length += _putchar(format[i]);*/
 		}
 		else
 			length += _putchar(format[i]);
