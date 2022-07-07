@@ -36,9 +36,10 @@ int _printf(const char *format, ...)
 			j = 0;
 			while (data[j].letter)
 			{
-				if (data[j].letter[0] == format[i + 1])
+				l = 0;
+				if (format[i + 1] && 
+				data[j].letter[0] == format[i + 1])
 				{
-					l = 0;
 					length += (data[j].f)(args);
 					l++;
 				}
