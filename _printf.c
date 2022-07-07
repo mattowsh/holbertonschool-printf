@@ -52,13 +52,10 @@ int _printf(const char *format, ...)
 			}
 			
 			if (l == 0 && format[i + 1] != '\0')
-				_putchar(format[i]);
+				length += _putchar(format[i]);
 		}
 		else
-		{
-			_putchar(format[i]);
-			length++;
-		}
+			length += _putchar(format[i]);
 
 		if (l>0) 
 			i += 2;
