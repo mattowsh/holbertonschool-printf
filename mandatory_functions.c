@@ -75,7 +75,6 @@ int print_di(va_list args)
 		num = -n;
 		counter++;
 	}
-	n = -n;
 
 	/* calculate the length of the integer (digits) */
 	if (n == 0)
