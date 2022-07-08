@@ -61,8 +61,8 @@ int print_prc(__attribute__((unused)) va_list args)
 
 int print_di(va_list args)
 {
-	int n = va_arg(args, int);
 	unsigned int num = va_arg(args, int);
+	int n = num;
 	unsigned int counter;
 	unsigned int p_num;
 	unsigned int exponente = 1;
@@ -78,7 +78,11 @@ int print_di(va_list args)
 
 	/* calculate the length of the integer (digits) */
 	if (n == 0)
+	{
+		_putchar('0');
 		counter = 1;
+		return (counter);
+	}
 
 	while (n > 0)
 	{
