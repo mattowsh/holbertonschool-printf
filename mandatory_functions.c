@@ -72,7 +72,7 @@ int print_di(va_list args)
 	if (n < 0)
 	{
 		_putchar('-');
-		num = n * (-1);
+		num = -n;
 		counter++;
 	}
 
@@ -84,9 +84,9 @@ int print_di(va_list args)
 		return (counter);
 	}
 
-	while (n > 0)
+	while (num > 0)
 	{
-		n /= 10;
+		num /= 10;
 		exponente *= 10;
 		counter++;
 	}
@@ -95,7 +95,7 @@ int print_di(va_list args)
 	/* print the number */
 	for (; exponente >= 1; exponente /= 10)
 	{
-		p_num = ((num / exponente) % 10);
+		p_num = ((-n / exponente) % 10);
 		_putchar(p_num + '0');
 	}
 
