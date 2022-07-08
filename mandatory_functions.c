@@ -63,6 +63,7 @@ int print_di(va_list args)
 {
 	unsigned int num = va_arg(args, int);
 	int n = num;
+	unsigned int num2 = num;
 	unsigned int counter;
 	unsigned int p_num;
 	unsigned int exponente = 1;
@@ -84,9 +85,9 @@ int print_di(va_list args)
 		return (counter);
 	}
 
-	while (n > 0)
+	while (num2 > 0)
 	{
-		n /= 10;
+		num2 /= 10;
 		exponente *= 10;
 		counter++;
 	}
