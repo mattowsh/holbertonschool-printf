@@ -90,12 +90,13 @@ int print_di(va_list args)
 		exponente *= 10;
 		counter++;
 	}
+	num = num * exponente;
 	exponente /= 10;
 
 	/* print the number */
 	for (; exponente >= 1; exponente /= 10)
 	{
-		p_num = ((-n / exponente) % 10);
+		p_num = ((num / exponente) % 10);
 		_putchar(p_num + '0');
 	}
 
