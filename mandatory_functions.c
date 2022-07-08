@@ -61,8 +61,42 @@ int print_prc(__attribute__((unused)) va_list args)
 
 int print_di(va_list args)
 {
-	int value = va_arg(args, int);
-	int module = value % 10;
+	int n = va_arg(args, int);
+	unsigned int num = va_arg(args, int);
+	int i;
+	unsigned int j;
+	unsigned int counter;
+	unsigned int p_num;
+	unsigned int exponente;
 
-/* PENDING */	
-}	
+	/* case: negative integer */
+	counter = 0;
+	if (n < 0)
+	{
+		_putchar('-');
+		num = n * (-1);
+		counter++;
+	}
+
+	/* calculate the length of the integer (digits) */
+	if (n == 0)
+		counter = 1;
+
+	while (n > 0)
+	{
+		n = n/10;
+		counter++;
+	}
+
+	/* print the number */
+	for (j = 0, exponente = 1; j < counter - 1; j++)
+		exponente *= 10;
+	for (i = counter - 1; i >= 0; i--)
+	{
+		p_num = ((num / exponente) % 10);
+		_putchar(p_num + '0');
+		exponente /= 10;
+	}
+
+	return (counter);
+}
