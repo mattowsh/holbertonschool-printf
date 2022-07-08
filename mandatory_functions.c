@@ -75,6 +75,7 @@ int print_di(va_list args)
 		num = -n;
 		counter++;
 	}
+	n = -n;
 
 	/* calculate the length of the integer (digits) */
 	if (n == 0)
@@ -84,13 +85,12 @@ int print_di(va_list args)
 		return (counter);
 	}
 
-	while (num > 0)
+	while (n > 0)
 	{
-		num /= 10;
+		n /= 10;
 		exponente *= 10;
 		counter++;
 	}
-	num = num * exponente;
 	exponente /= 10;
 
 	/* print the number */
