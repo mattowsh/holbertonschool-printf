@@ -63,7 +63,7 @@ int print_di(va_list args)
 {
 	unsigned int num = va_arg(args, int);
 	int n = num;
-	unsigned int num2 = num;
+	unsigned int num2 = -n;
 	unsigned int counter;
 	unsigned int p_num;
 	unsigned int exponente = 1;
