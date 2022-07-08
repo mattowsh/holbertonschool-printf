@@ -63,11 +63,9 @@ int print_di(va_list args)
 {
 	int n = va_arg(args, int);
 	unsigned int num = va_arg(args, int);
-	int i;
-	unsigned int j;
 	unsigned int counter;
 	unsigned int p_num;
-	unsigned int exponente;
+	unsigned int exponente = 1;
 
 	/* case: negative integer */
 	counter = 0;
@@ -84,18 +82,17 @@ int print_di(va_list args)
 
 	while (n > 0)
 	{
-		n = n/10;
+		n /= 10;
+		exponente *= 10;
 		counter++;
 	}
+	exponente /= 10;
 
 	/* print the number */
-	for (j = 0, exponente = 1; j < counter - 1; j++)
-		exponente *= 10;
-	for (i = counter - 1; i >= 0; i--)
+	for (; exponente >= 1; exponente /= 10)
 	{
 		p_num = ((num / exponente) % 10);
 		_putchar(p_num + '0');
-		exponente /= 10;
 	}
 
 	return (counter);
