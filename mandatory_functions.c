@@ -15,7 +15,7 @@ int print_c(va_list args)
 	return (1); /* because we prints ONLY a char */
 }
 
-/** 
+/**
  * print_s - Prints a string
  * @args : list of arguments
  *
@@ -36,20 +36,20 @@ int print_s(va_list args)
 		i++;
 	}
 
-	return (i); 
+	return (i);
 }
 
 /**
  * print_prc - Prints percentage sign
  * @args : list of args
- * 
+ *
  * Return : length of the string
  */
 
 int print_prc(__attribute__((unused)) va_list args)
 {
 	_putchar('%');
-	return (1); 
+	return (1);
 }
 
 /**
@@ -61,18 +61,19 @@ int print_prc(__attribute__((unused)) va_list args)
 
 int print_di(va_list args)
 {
-	unsigned int num = va_arg(args, int);
-	int n = num;
-	unsigned int counter;
-	unsigned int p_num;
-	unsigned int exponente = 1;
+	long int num = va_arg(args, int);
+	long int n = num;
+	long int counter;
+	long int p_num;
+	long int exponente = 1;
 
 	/* case: negative integer */
 	counter = 0;
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -n;
+		n = -n;
+		num = -num;
 		counter++;
 	}
 
