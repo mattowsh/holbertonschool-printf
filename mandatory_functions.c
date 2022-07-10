@@ -11,8 +11,7 @@ int print_c(va_list args)
 {
 	char c = va_arg(args, int);
 
-	_putchar(c);
-	return (1); /* because we prints ONLY a char */
+	return (_putchar(c)); /* because we prints ONLY a char */
 }
 
 /**
@@ -43,13 +42,12 @@ int print_s(va_list args)
  * print_prc - Prints percentage sign
  * @args : list of args
  *
- * Return : length of the string
+ * Return: length of the string
  */
 
 int print_prc(__attribute__((unused)) va_list args)
 {
-	_putchar('%');
-	return (1);
+	return (_putchar('%'));
 }
 
 /**

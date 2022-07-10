@@ -2,7 +2,8 @@
 
 /**
  * get_func - Selects the correct function to execute
- * @f : function to select
+ * @args : list of arguments
+ * @lett : letter, correspond to format[i + 1]
  *
  * Return: length of string/int printed
  */
@@ -16,11 +17,13 @@ int get_func(va_list args, char lett)
 		{"%", print_prc},
 		{"d", print_di},
 		{"i", print_di},
-		/*{"u", print_u}, -isn't requerided to mandatory tasks-
-		{"o", print_o},
-		{"x", print_xX},
-		{"X", print_xX},
-		{"p", print_p},*/
+		/*
+		 * {"u", print_u}, -isn't requerided to mandatory tasks-
+		 * {"o", print_o},
+		 * {"x", print_xX},
+		 * {"X", print_xX},
+		 * {"p", print_p},
+		*/
 		{NULL, NULL}
 	};
 
