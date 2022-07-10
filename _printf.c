@@ -2,29 +2,14 @@
 
 /**
  * _printf - Produces output according to printf C command
- *
+ * @format : string or integer to be printed
  * Return: number of characters printed, excluding the final null byte
  */
 
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, j = 0, l = 0, length = 0;
-
-/* functions to execute according to format[i + 1] */
-	toprint_t data[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"%", print_prc},
-		{"d", print_di},
-		{"i", print_di},
-		/*{"u", print_u}, -isn't requerided to mandatory tasks-
-		{"o", print_o},
-		{"x", print_xX},
-		{"X", print_xX},
-		{"p", print_p},*/
-		{NULL, NULL}
-	};
+	int i = 0, length = 0;
 
 	va_start(args, format);
 
@@ -39,23 +24,8 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 
-			j = 0;
-			while (data[j].letter && format[i + 1])
-			{
-				if (data[j].letter[0] == format[i + 1])
-				{
-					length += (data[j].f)(args);
-					l = 1;
-				}
-				j++;
-			}
-			if (l)
-			{
-				i++;
-				l = 0;
-			}
-			else
-				length += _putchar('%');
+			length += get_func(args, format[i + 1]);
+			i++;
 		}
 		else
 			length += _putchar(format[i]);
