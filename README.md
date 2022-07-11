@@ -62,7 +62,9 @@ Authorized functions and macros:
 
 - ***mandatory_functions.c***:  contains the functions ***print_c***, ***print_s***, ***print_prc*** and ***print_di*** wich handle the conversion specifiers for ***c***, ***s***, ***%***, ***d*** and ***i*** respectively.
 
-- ***3_printf.man*** :  man page for the custom ***_printf function***, wich can be executed by typing `man ./3_printf.man`
+- ***get_func.c***: selects the correct function to execute. These functions are localized in ***mandatory_functions.c***.
+
+- ***3_printf.man***:  man page for the custom ***_printf function***, wich can be executed by typing `man ./3_printf.man`
 ### Authors
 
  ***Belen Matto*** | [@mattowsh](www.github.com/mattowsh)
