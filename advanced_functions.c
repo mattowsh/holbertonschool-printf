@@ -9,7 +9,6 @@
 
 void print_b_rec(long int n)
 {
-	/* base case */
 	if (n <= 0)
 		_putchar('0');
 	else if (n == 1)
@@ -22,7 +21,7 @@ void print_b_rec(long int n)
 }
 
 /**
- * print_b - Prints the length of the integer calling print_b_rec
+ * print_b - Prints the length of the integer calling to print_b_rec
  * @args : list of arguments
  *
  * Return: lenght of the integer
@@ -31,13 +30,16 @@ void print_b_rec(long int n)
 int print_b(va_list args)
 {
 	long int num = va_arg(args, long int);
-	long int i = 1;
+	long int i = 0;
 
 	print_b_rec(num);
-	while (num > 0)
+
+	if (num <= 1)
+		i = 1;
+	while (num > 1)
 	{
-		num /= 2;
 		i++;
+		num /= 2;
 	}
 
 	return (i);
