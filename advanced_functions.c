@@ -9,15 +9,11 @@
 
 void print_b_rec(long int n)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n == 1)
-		_putchar('1');
-	else if (n > 1)
+	if (n > 2)
 	{
 		print_b_rec(n / 2);
-		_putchar((n % 2) + '0');
 	}
+	_printf("%c", (n % 2) + '0');
 }
 
 /**
@@ -39,8 +35,9 @@ int print_b(va_list args)
 		i++;
 	}
 
+	printf("hola\n\n");
 	print_b_rec(num);
-
+	printf("hola");
 	while (num >= 0)
 	{
 		num /= 2;
