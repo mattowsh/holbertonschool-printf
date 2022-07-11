@@ -10,9 +10,8 @@
 void print_b_rec(unsigned int n)
 {
 	if (n > 2)
-	{
 		print_b_rec(n / 2);
-	}
+
 	_printf("%c", (n % 2) + '0');
 }
 
@@ -34,6 +33,6 @@ int print_b(va_list args)
 		num /= 2;
 		i++;
 	}
-	
+
 	return (i);
 }
