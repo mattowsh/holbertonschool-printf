@@ -26,7 +26,7 @@ void print_b_rec(unsigned int n)
 int print_b(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	unsigned int i = 1;
+	unsigned int i = 0;
 
 	print_b_rec(num);
 	while (num > 0)
@@ -34,6 +34,8 @@ int print_b(va_list args)
 		num /= 2;
 		i++;
 	}
+	if (num == 0)
+		i++;
 
 	return (i);
 }
