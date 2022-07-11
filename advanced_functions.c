@@ -9,11 +9,11 @@
 
 void print_b_rec(long int n)
 {
-	if (n <= 0)
+	if (n == 0)
 		_putchar('0');
 	else if (n == 1)
 		_putchar('1');
-	else
+	else if (n > 1)
 	{
 		print_b_rec(n / 2);
 		_putchar((n % 2) + '0');
@@ -30,16 +30,21 @@ void print_b_rec(long int n)
 int print_b(va_list args)
 {
 	long int num = va_arg(args, long int);
-	long int i = 0;
+	long int i = 1;
+
+	if (num < 0)
+	{
+		num = -num;
+		_putchar('-');
+		i++;
+	}
 
 	print_b_rec(num);
 
-	if (num <= 1)
-		i = 1;
-	while (num > 1)
+	while (num >= 0)
 	{
-		i++;
 		num /= 2;
+		i++;
 	}
 
 	return (i);
