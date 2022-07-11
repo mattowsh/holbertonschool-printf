@@ -10,7 +10,8 @@
 int print_b(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	unsigned int i = 0, length = 0, bufferB[100];
+	unsigned int bufferB[100];
+	int i = 0, length = 0;
 
 	if (num == 0)
 	{
@@ -18,23 +19,15 @@ int print_b(va_list args)
 		return (1);
 	}
 	
-	if	(num == 1)
-	{
-		_putchar('1');
-		return (1);
-	}
-
 	/* to realize the conversion */
 	for (i = 0; num > 0; i++)
 	{
-		if (num == 1 || num == 2)
-			bufferB[i] = 1;
 		bufferB[i] = num % 2;
 		num /= 2;
 	}
 
 	/* to calculate the length of the int */
-	for (i = i - 1; i <= 0; i--)
+	for (i = i - 1; i >= 0; i--)
 	{
 		_putchar(bufferB[i] + '0');
 		length++;
