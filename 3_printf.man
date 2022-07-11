@@ -1,0 +1,38 @@
+.TH _printf 3 "11 july 2022"
+.SH NAME
+.B
+_printf
+- Prints output according to printf C command, generating an output to stdout.
+.SH SYNOPSIS
+#include "main.h"
+.sp 1
+int _printf(const char *format, ...)
+.SH DESCRIPTION
+_printf is a custom implementation of the C programming function printf. Receives a input in the form of 
+.I
+format 
+and a variable quantity of arguments in the form of a 
+.I
+list
+.
+.sp 1
+This project is an application of the C programming language learnt by Marcelo Rodriguez and Belen Matto as students from cohort 18 at Holberton School Uruguay.
+.SH FORMAT OF THE FORMAT STRING
+The format string is a character string. It is formed of multiple ordinary characters (except "%") that will be printed unchanged in the output stream. When the character "%" is reconognized in the format string, _printf will searchs if correspond to any conversion specifiers. In that case, the conversion will execute.
+.SH CONVERSION SPECIFIERS
+.TP
+-c
+The argument received is converted to a char. The result is printed.
+.TP
+-s
+The argument received (type const char*) are printed like a pointer to a string (an array of characteres). The result is printed but not including the terminating null byte.
+.TP
+-%
+The '%' character is printed. No argument is converted. The complete conversion correspond to "%%".
+.TP
+-d, i
+The argument received is convert to a signed decimal notation. The result is printed.
+.SH AUTHORS
+Marcelo Rodriguez & Belen Matto
+.sp 1
+Holberton School, 2022
