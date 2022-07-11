@@ -27,6 +27,8 @@ int print_b(va_list args)
 	/* to realize the conversion */
 	for (i = 0; num > 0; i++)
 	{
+		if (num == 1 || num == 2)
+			bufferB[i] = 1;
 		bufferB[i] = num % 2;
 		num /= 2;
 	}
