@@ -60,7 +60,7 @@ Authorized functions and macros:
 
 - ***main.h***:  contains all function prototypes used for ***_printf***.
 
-- ***mandatory_functions.c***:  contains the functions ***print_c***, ***print_s***, ***print_prc*** and ***print_di*** wich handle the conversion specifiers for ***c***, ***s***, ***%***, ***d*** and ***i*** respectively.
+- ***mandatory_functions.c***:  contains the functions ***print_c***, ***print_s***, ***print_prc***, ***print_di*** and ***print_b*** wich handle the conversion specifiers for ***c***, ***s***, ***%***, ***d***, ***i*** and ***b*** respectively.
 
 - ***get_func.c***: selects the correct function to execute. These functions are localized in ***mandatory_functions.c***.
 

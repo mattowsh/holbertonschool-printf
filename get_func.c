@@ -18,13 +18,6 @@ int get_func(va_list args, char lett)
 		{"d", print_di},
 		{"i", print_di},
 		{"b", print_b},
-		/*
-		 * {"u", print_u}, -isn't requerided to mandatory tasks-
-		 * {"o", print_o},
-		 * {"x", print_xX},
-		 * {"X", print_xX},
-		 * {"p", print_p},
-		*/
 		{NULL, NULL}
 	};
 

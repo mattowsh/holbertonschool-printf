@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_b - Prints the length of the integer calling to print_b_rec
+ * print_b - Converts a number in binary and print it
  * @args : list of arguments
  *
  * Return: lenght of the integer

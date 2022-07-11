@@ -32,6 +32,8 @@ The '%' character is printed. No argument is converted. The complete conversion 
 .TP
 -d, i
 The argument received is convert to a signed decimal notation. The result is printed.
+-b
+The argument received is convert to a binary. The result is printed.
 .SH AUTHORS
 Marcelo Rodriguez & Belen Matto
 .sp 1
