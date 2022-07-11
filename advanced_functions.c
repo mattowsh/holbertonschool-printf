@@ -7,7 +7,7 @@
  * @n : integer
  */
 
-void print_b_rec(long int n)
+void print_b_rec(unsigned int n)
 {
 	if (n > 2)
 	{
@@ -25,20 +25,11 @@ void print_b_rec(long int n)
 
 int print_b(va_list args)
 {
-	long int num = va_arg(args, long int);
-	long int i = 1;
+	unsigned int num = va_arg(args, unsigned int);
+	unsigned int i = 1;
 
-	if (num < 0)
-	{
-		num = -num;
-		_putchar('-');
-		i++;
-	}
-
-	printf("hola\n\n");
 	print_b_rec(num);
-	printf("hola");
-	while (num >= 0)
+	while (num > 0)
 	{
 		num /= 2;
 		i++;
