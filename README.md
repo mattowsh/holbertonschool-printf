@@ -69,7 +69,7 @@ Authorized functions and macros:
 - ***3_printf.man***:  man page for the custom ***_printf function***, wich can be executed by typing `man ./3_printf.man`
 
 ### Flowchart
-![My_Image](../downloads/vaa.png)
+
 
 ### Authors
 
