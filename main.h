@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 /**
  * struct toprint - Type of argument and function associated info
