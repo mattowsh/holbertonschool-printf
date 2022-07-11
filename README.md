@@ -52,6 +52,8 @@ Authorized functions and macros:
 - [x]  Handle conversion specifiers d, i.
 - [x]  Create a man page for your function.
 
+## Advanced Tasks
+- [x] Custom conversion specifiers: the unsigned int argument is converted to binary.
 
 ## File Descriptions
 - ***_printf.c***:  contains the function  ***_printf***, which uses the prototype ***int _printf(const char *format, ...)***;. The format string is composed of zero or more directives. See man 3 printf for more detail. _printf will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to stdout, the standard output stream.
@@ -65,6 +67,10 @@ Authorized functions and macros:
 - ***get_func.c***: selects the correct function to execute. These functions are localized in ***mandatory_functions.c***.
 
 - ***3_printf.man***:  man page for the custom ***_printf function***, wich can be executed by typing `man ./3_printf.man`
+
+### Flowchart
+!(https://drive.google.com/file/d/1XJP-FYEjmeCi8hRR3ZMzK8-cewfp_5Zr/view)
+
 ### Authors
 
  ***Belen Matto*** | [@mattowsh](www.github.com/mattowsh)
