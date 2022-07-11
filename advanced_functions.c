@@ -29,13 +29,11 @@ int print_b(va_list args)
 	unsigned int i = 0;
 
 	print_b_rec(num);
-	while (num > 0)
+	while (num > 2)
 	{
 		num /= 2;
 		i++;
 	}
-	if (num == 0)
-		i++;
-
+	
 	return (i);
 }
