@@ -1,6 +1,4 @@
-
-
-# _printf  
+# <a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png" width=3% heigth=3% ></img></a> _printf  
 
 _printf   is a custom implementation of the C programming function printf. This project is an application of the C 
 programming language learnt by Marcelo Rodriguez and Belen Matto as students from cohort 18 at Holberton School Uruguay.
